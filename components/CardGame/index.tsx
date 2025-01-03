@@ -127,7 +127,7 @@ const CardGame = () => {
               <div
                 className="w-full h-full bg-animated flex items-center justify-center"
                 style={{
-                  fontSize: "30vw",
+                  fontSize: +cardSelected >= 10 ? "20vw" : "25vw",
                   color: "#167DDD",
                   textShadow: "0 0 10px #fff",
                 }}
