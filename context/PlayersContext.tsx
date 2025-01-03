@@ -39,12 +39,6 @@ const PlayersProvider: FC<Props> = ({ children }) => {
     return [];
   });
 
-  // const [cardGameWinner, setCardGameWinner] = useState<string[]>(
-  //   (localStorage &&
-  //     JSON.parse(localStorage.getItem("cardGameWinner") || "[]")) ||
-  //     []
-  // );
-
   const [spinningWheelWinner, setSpinningWheelWinner] = useState<string[]>(
     () => {
       if (typeof window !== "undefined") {
@@ -53,12 +47,6 @@ const PlayersProvider: FC<Props> = ({ children }) => {
       return [];
     }
   );
-
-  // const [spinningWheelWinner, setSpinningWheelWinner] = useState<string[]>(
-  //   (localStorage &&
-  //     JSON.parse(localStorage.getItem("spinningWheelWinner") || "[]")) ||
-  //     []
-  // );
 
   const updateMaximumPlayers = (players: string[]) => {
     setPlayers(players);
