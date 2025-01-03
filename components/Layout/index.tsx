@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, useEffect } from "react";
+import React, { FC, useEffect, useState } from "react";
 import Link from "next/link";
 import { Cog } from "lucide-react";
 
@@ -13,6 +13,12 @@ type Props = {
 };
 
 const Layout: FC<Props> = ({ children }) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   useEffect(() => {
     // Press F to fullscreen
     document.addEventListener("keydown", (e) => {
@@ -74,7 +80,7 @@ const Layout: FC<Props> = ({ children }) => {
             backgroundRepeat: "no-repeat",
           }}
         >
-          {children}
+          {isClient ? children : ""}
         </main>
       </div>
     </AuthProvider>
