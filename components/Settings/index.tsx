@@ -65,7 +65,7 @@ const Settings = () => {
               disabled={!validMaximumPlayers}
               onClick={onUpdate}
             >
-              Cập nhật
+              Update
             </button>
           </div>
         </div>

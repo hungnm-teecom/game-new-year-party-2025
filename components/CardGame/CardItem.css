@@ -2,12 +2,6 @@
   height: 250px;
 }
 
-/* .item-flip::after {
-  content: "🎉";
-  position: absolute;
-  bottom: 60px;
-} */
-
 @media (min-width: 1024px) {
   .card-item {
     height: 335px;
@@ -41,7 +35,6 @@
   z-index: 1;
 }
 
-/* Pseudo-element for border effect */
 .bg-animated::before {
   content: "";
   position: absolute;
@@ -57,7 +50,6 @@
   animation: bg-animation 3s linear infinite;
 }
 
-/* Sync the gradient animation */
 @keyframes bg-animation {
   0% {
     background-position: 0% 50%;
@@ -126,7 +118,6 @@
   }
 }
 
-/* zoom out and zoom in effect */
 .card-select {
   transition: transform 0.5s;
 }
@@ -137,21 +128,17 @@
   animation: zoom-in-out 2s infinite ease-in-out;
 }
 
-/* Keyframes for zoom in and zoom out */
 @keyframes zoom-in-out {
   0% {
     transform: scale(1);
-    /* Normal size */
   }
 
   50% {
     transform: scale(1.25);
-    /* Zoom in */
   }
 
   100% {
     transform: scale(1);
-    /* Back to normal size */
   }
 }
 
@@ -159,5 +146,4 @@
   transform: scale(1.05);
   transition: transform 0.5s;
   box-shadow: 0 0 20px 10px #00ff00;
-  /* Phát sáng màu trắng */
 }

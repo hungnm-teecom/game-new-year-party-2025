@@ -60,13 +60,13 @@ const Layout: FC<Props> = ({ children }) => {
             </li>
             <li>
               <Link href="/settings" className="mx-1">
-                Cài đặt
+                Settings
               </Link>
             </li>
           </ul>
         </div>
       </div>
-      <div className="gradient-background w-full h-full">
+      <div className="w-full h-full">
         <main
           className="w-screen h-screen bg-cover bg-center overflow-auto"
           style={{

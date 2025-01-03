@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
 
-const FireworksEffect: FC<{ show: boolean }> = ({ show }) => {
+const FireworksTwo: FC<{ show: boolean }> = ({ show }) => {
   const { width, height } = useWindowSize();
 
   if (!show) return null;
@@ -18,4 +18,4 @@ const FireworksEffect: FC<{ show: boolean }> = ({ show }) => {
   );
 };
 
-export default FireworksEffect;
+export default FireworksTwo;

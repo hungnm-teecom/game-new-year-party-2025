@@ -7,12 +7,8 @@ import { PlayersContext } from "@/context/PlayersContext";
 
 import CardItem from "./CardItem";
 const Modal = dynamic(() => import("@/components/common/Modal"));
-const FireworksEffect = dynamic(
-  () => import("@/components/common/FireworksEffect")
-);
-const FireworksComponent = dynamic(
-  () => import("@/components/common/Fireworks")
-);
+const FireworksOne = dynamic(() => import("@/components/common/FireworksOne"));
+const FireworksTwo = dynamic(() => import("@/components/common/FireworksTwo"));
 
 const CardGame = () => {
   const {
@@ -63,7 +59,7 @@ const CardGame = () => {
         behavior: "smooth",
       });
 
-      // disabled scroll
+      // Disabled scroll
       document.body.style.overflow = "hidden";
     }, 5000);
   };
@@ -78,6 +74,7 @@ const CardGame = () => {
   };
 
   const onClose = () => {
+    // Enabled scroll
     document.body.style.overflow = "auto";
     setShowWinner(false);
     setCardSelected("");
@@ -148,8 +145,8 @@ const CardGame = () => {
         </div>
       </Modal>
 
-      <FireworksEffect show={showWinner} />
-      {showWinner && <FireworksComponent />}
+      {showWinner && <FireworksOne />}
+      <FireworksTwo show={showWinner} />
     </div>
   );
 };
